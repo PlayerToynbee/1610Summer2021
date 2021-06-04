@@ -10,13 +10,13 @@ public class NewBehaviourScript : MonoBehaviour
         {
             GetComponent<Renderer>().material.color = Color.red;
         }
-        if (Input.GeKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             GetComponent<Renderer>().material.color = Color.green;
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            GetComponent<Renderer>.material.color = Color.blue;
+            GetComponent<Renderer>().material.color = Color.blue;
         }
     }
 }
