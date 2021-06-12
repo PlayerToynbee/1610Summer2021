@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonInput : MonoBehaviour
 {
-    public UI.Image graphic;
+    public GUITexture graphic;
     public Texture2D standard;
     public Texture2D downgfx;
     public Texture2D upgfx;
