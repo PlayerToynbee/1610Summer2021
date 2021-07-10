@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d12a48d0-4862-420f-b218-d2bee9878e46" name="Default Changelist" comment="" />
+    <list default="true" id="558af6bc-12cc-476a-8831-579f4d50c081" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,13 +10,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Challenge 2/Scripts/DestroyOutOfBoundsX.cs" />
-      <option value="$PROJECT_DIR$/Assets/Challenge 2/Scripts/SpawnManagerX.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
     </changedPaths>
   </component>
-  <component name="ProjectId" id="1v1BI67GirvNVztwIRhxyBcklM2" />
+  <component name="ProjectId" id="1v6pvucf3ZsRcWmvuZQyv3kg9gL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,12 +56,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d12a48d0-4862-420f-b218-d2bee9878e46" name="Default Changelist" comment="" />
-      <created>1625719639268</created>
+      <changelist id="558af6bc-12cc-476a-8831-579f4d50c081" name="Default Changelist" comment="" />
+      <created>1625892633853</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1625719639268</updated>
-      <workItem from="1625719654498" duration="3994000" />
+      <updated>1625892633853</updated>
+      <workItem from="1625892643263" duration="2119000" />
     </task>
     <servers />
   </component>
