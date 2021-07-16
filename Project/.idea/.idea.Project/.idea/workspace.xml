@@ -11,10 +11,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orientation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Orientation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
     </changedPaths>
@@ -61,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625892633853</updated>
-      <workItem from="1625892643263" duration="2119000" />
+      <workItem from="1625892643263" duration="42033000" />
     </task>
     <servers />
   </component>
@@ -69,5 +71,63 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="41" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2426" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2477" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2054" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2166" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
+          <line>51</line>
+          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2319" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2395" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="37" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2035" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2036" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
