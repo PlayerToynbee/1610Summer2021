@@ -8,20 +8,35 @@ public class CameraControl : MonoBehaviour
 { 
     public GameObject target;
     public float damping = 1;
-    Vector3 offset;
-    public float rotateSpeed = 5;
+    public Vector3 offset;
+    public float rotateSpeed = 20;
+    private Vector3 targetRotation;
+    private float vertical;
+    private float horizontal;
+
 
 
     void Start()
     {
         offset = target.transform.position - transform.position;
+        transform.rotation = target.transform.rotation;
+        transform.position = target.transform.position;
     }
      
     void LateUpdate()
     {
-        float horizontalCam = Input.GetAxis("Mouse X") * rotateSpeed;
-        float verticalCam = Input.GetAxis("Mouse Y") * rotateSpeed;
-        transform.Rotate(verticalCam,horizontalCam, 0);
+        
+        var orientation = target.transform.rotation;
+        targetRotation.x = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
+        targetRotation.y = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+        //targetRotation.z = 0;
+        //targetRotation.x = Mathf.Clamp(targetRotation.x, -40, 40);
+        //transform.rotation = Quaternion.Euler(targetRotation);
+        //float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
+        //float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
+        //horizontal = transform.rotation.x;
+        //vertical = transform.rotation.y;
+        //transform.Rotate(vertical,horizontal, 0);
         //Quaternion cam = transform.rotation;
         //float currentAngle = transform.eulerAngles.y;
         //float desiredAngle = transform.eulerAngles.y;
@@ -29,12 +44,10 @@ public class CameraControl : MonoBehaviour
         //float angle = Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
         //vertAngle = Input.GetAxis("Mouse Y");
         //horiAngle = Input.GetAxis("Mouse X");
-        Quaternion rotation = Quaternion.Euler(verticalCam, horizontalCam, 0);
-        //transform.position = target.transform.position - (rotation * offset);
-        transform.RotateAround(target.transform.position, Vector3.up, horizontalCam);
-        transform.RotateAround(target.transform.position, Vector3.right, verticalCam);
+        Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
+        transform.position = target.transform.position - (transform.rotation * offset);
         transform.LookAt(target.transform);
-        Debug.Log(verticalCam + " " + horizontalCam);
-        
+        //Debug.Log(vertical + " " + horizontal);
+
     }
 }

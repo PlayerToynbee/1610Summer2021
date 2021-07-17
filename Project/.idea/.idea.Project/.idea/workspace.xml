@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="558af6bc-12cc-476a-8831-579f4d50c081" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,6 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orientation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -17,8 +28,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Orientation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v6pvucf3ZsRcWmvuZQyv3kg9gL" />
@@ -64,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1625892633853</updated>
       <workItem from="1625892643263" duration="42033000" />
+      <workItem from="1626470897688" duration="10245000" />
     </task>
     <servers />
   </component>
@@ -77,52 +89,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="41" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="2426" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2477" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>49</line>
+          <line>48</line>
           <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="2054" />
+              <option value="1591" />
             </startOffsets>
             <endOffsets>
-              <option value="2166" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="2319" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2395" />
+              <option value="1681" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>48</line>
+          <line>47</line>
           <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="37" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="2035" />
+              <option value="1567" />
             </startOffsets>
             <endOffsets>
-              <option value="2036" />
+              <option value="1568" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

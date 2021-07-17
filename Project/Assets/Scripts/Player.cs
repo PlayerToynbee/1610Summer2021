@@ -11,8 +11,7 @@ public class Player : MonoBehaviour
     public Transform target;
     private float vertical;
     private float horizontal;
-    private float rotMax = 45;
-    private float rotMin = 325;
+    public float rot = 0.25f;
     private Quaternion baseOrientation = new Quaternion(0, 0, 0,1);
     
 
@@ -21,7 +20,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        baseOrientation = target.rotation;
+        baseOrientation.y = target.rotation.y;
         playerRigidBody = GetComponent<Rigidbody>();
     }
 
@@ -29,32 +28,27 @@ public class Player : MonoBehaviour
     {
         var vel = playerRigidBody.velocity;      //to get a Vector3 representation of the velocity
         float speed = vel.magnitude;
+        var playerRotation = transform.rotation;
       
-        horizontal = -Input.GetAxis("Horizontal")/* * rotationSpeed * Time.deltaTime*/;
-        //horizontal = Mathf.Clamp(horizontal, -0.25f, 0.25f);
-        transform.Rotate(transform.rotation.x, transform.rotation.y, horizontal);
-        vertical = Input.GetAxis("Vertical")/* * rotationSpeed * Time.deltaTime*/;
-        transform.Rotate(vertical,transform.rotation.y, transform.rotation.z);
-        if (transform.eulerAngles.x > 45 && transform.eulerAngles.x < 100) transform.rotation = Quaternion.Euler(rotMax, transform.rotation.y, transform.rotation.z);
-        if (transform.eulerAngles.x <= 325 && transform.eulerAngles.x > 100) transform.rotation = Quaternion.Euler(rotMin, transform.rotation.y, transform.rotation.z);
-        if (transform.eulerAngles.z > 45 && transform.eulerAngles.z < 100) transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, rotMax);
-        if (transform.eulerAngles.z <= 325 && transform.eulerAngles.z > 100) transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, rotMin);
+        horizontal = -Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+        vertical = Input.GetAxis("Vertical") * rotationSpeed * Time.deltaTime;
+        transform.Rotate(vertical, transform.rotation.y, horizontal);
+        playerRotation.x = Mathf.Clamp(transform.rotation.x, -rot, rot);
+        playerRotation.z = Mathf.Clamp(transform.rotation.z, -rot, rot);
+        playerRotation.y = transform.rotation.y;
+        //transform.Rotate(playerRotation.x,transform.rotation.y, playerRotation.z);
+        transform.rotation = playerRotation;
         
         if (Input.GetKey(KeyCode.Space))
         {
-            playerRigidBody.AddForce(transform.up * flyPower);
+            playerRigidBody.AddForce(transform.up * flyPower * Time.deltaTime);
         }
 
         if (!Input.anyKey)
         {
-            //var newPositionX = Mathf.SmoothDamp(transform.rotation.x, target.transform.rotation.x , ref xVelocity, smoothTime);
-            //var newPositionZ = Mathf.SmoothDamp(transform.rotation.z, target.transform.rotation.z , ref xVelocity, smoothTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, baseOrientation, smoothTime);
-            //transform.Rotate(newPositionX, transform.rotation.y, newPositionZ);
-            //transform.rotation = Mathf.SmoothDamp(transform.rotation)
-            //transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, baseOrientation, smoothTime * (speed/100));
         }
-        //Debug.Log(transform.eulerAngles);
+        Debug.Log(speed);
     
         
     }
