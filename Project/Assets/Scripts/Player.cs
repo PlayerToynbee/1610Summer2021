@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float flyPower = 10;
-    public float rotationSpeed = 40;
+    public float power = 40;
     private Rigidbody playerRigidBody;
     public Transform target;
     private float vertical;
@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        baseOrientation.y = target.rotation.y;
         playerRigidBody = GetComponent<Rigidbody>();
     }
 
@@ -29,26 +28,23 @@ public class Player : MonoBehaviour
         var vel = playerRigidBody.velocity;      //to get a Vector3 representation of the velocity
         float speed = vel.magnitude;
         var playerRotation = transform.rotation;
-      
-        horizontal = -Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
-        vertical = Input.GetAxis("Vertical") * rotationSpeed * Time.deltaTime;
-        transform.Rotate(vertical, transform.rotation.y, horizontal);
-        playerRotation.x = Mathf.Clamp(transform.rotation.x, -rot, rot);
-        playerRotation.z = Mathf.Clamp(transform.rotation.z, -rot, rot);
-        playerRotation.y = transform.rotation.y;
-        //transform.Rotate(playerRotation.x,transform.rotation.y, playerRotation.z);
-        transform.rotation = playerRotation;
-        
+        baseOrientation = transform.rotation;
+        baseOrientation = new Quaternion(target.rotation.x, target.rotation.y, 0, target.rotation.w);
+        horizontal = Input.GetAxis("Horizontal") * power * Time.deltaTime;
+        vertical = Input.GetAxis("Vertical") * power * Time.deltaTime;
+        playerRigidBody.AddForce(transform.forward * vertical * flyPower * Time.deltaTime);
+        playerRigidBody.AddForce(transform.right * horizontal * flyPower * Time.deltaTime);
+       
         if (Input.GetKey(KeyCode.Space))
         {
             playerRigidBody.AddForce(transform.up * flyPower * Time.deltaTime);
         }
 
-        if (!Input.anyKey)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, baseOrientation, smoothTime * (speed/100));
-        }
-        Debug.Log(speed);
+        //if (!Input.anyKey)
+        //{
+            transform.rotation = Quaternion.Lerp(transform.rotation, baseOrientation, smoothTime);
+        //}
+        Debug.Log(vertical);
     
         
     }
