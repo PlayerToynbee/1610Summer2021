@@ -20,12 +20,13 @@ public class CameraControl : MonoBehaviour
      
     void LateUpdate() 
     {
-        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;// ori
+        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed * inv;
-        target.transform.Rotate(vertical,horizontal,0);
+        //target.transform.Rotate(vertical,horizontal,0);
+        //transform.Rotate(vertical,horizontal,0);
         
-       float desiredAngleY = transform.eulerAngles.y + horizontal;
-       float desiredAngleX = transform.eulerAngles.x + vertical;
+        float desiredAngleY = transform.eulerAngles.y + horizontal;
+        float desiredAngleX = transform.eulerAngles.x + vertical;
         Quaternion rotation = Quaternion.Euler(desiredAngleX, desiredAngleY, 0);
         transform.position = target.transform.position - (rotation * offset);
          

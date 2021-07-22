@@ -22,7 +22,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orientation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -77,7 +76,8 @@
       <updated>1625892633853</updated>
       <workItem from="1625892643263" duration="42033000" />
       <workItem from="1626470897688" duration="10245000" />
-      <workItem from="1626727168830" duration="6987000" />
+      <workItem from="1626727168830" duration="7396000" />
+      <workItem from="1626891422152" duration="6080000" />
     </task>
     <servers />
   </component>
@@ -85,37 +85,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>44</line>
-          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="39" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="1452" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1528" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player.cs</url>
-          <line>43</line>
-          <properties documentPath="C:\Users\Force\Desktop\Stuff\Class\1610Summer2021\Project\Assets\Scripts\Player.cs" initialLine="37" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="1428" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1429" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
