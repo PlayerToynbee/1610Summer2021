@@ -8,33 +8,50 @@ public class Player : MonoBehaviour
     public float flyPower = 10;
     public float power = 40;
     private Rigidbody playerRigidBody;
+    private Rigidbody supplyRb;
     public Transform target;
     private float vertical;
     private float horizontal;
     public float rot = 0.25f;
-    private Quaternion baseOrientation = new Quaternion(0, 0, 0,1);
+    private Quaternion baseOrientation = new Quaternion(0, 0, 0, 1);
     private bool stun = false;
     public float stunVal = 0;
     public float stunMult = 1;
     public float stunRec = 5;
     private float speed;
-    
-    
+    public bool isHolding = false;
+    public GameObject resourceObj;
+    public GameObject self;
+    public GameObject grab;
 
 
-    public float smoothTime = 0.3f;
+
+
+
+public float smoothTime = 0.3f;
 
     private void Start()
     {
         playerRigidBody = GetComponent<Rigidbody>();
     }
+    
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Surface" && speed > 10 && !stun)
+        if (collision.gameObject.tag == "Surface" && speed > 15 && !stun)
         {
             stun = true;
-            stunVal = (stunMult * speed) / 3;
+            stunVal = (stunMult * speed) / 5;
+        }
+        if (collision.gameObject.CompareTag("Supply") && !isHolding)
+        {
+            supplyRb = collision.gameObject.GetComponent<Rigidbody>();
+            supplyRb.isKinematic = true;
+            resourceObj = collision.gameObject;
+            resourceObj.transform.position = grab.transform.position;
+            //resourceObj.transform.SetParent(self.gameObject.transform);
+            isHolding = true;
+            //gameObject.GetComponent<Transform>().SetParent(collision.collider.gameObject);
         }
     }
 
@@ -57,9 +74,17 @@ public class Player : MonoBehaviour
                 playerRigidBody.AddForce(transform.up * flyPower * Time.deltaTime);
             }
 
-            //if (!Input.anyKey)
-            //{
             transform.rotation = Quaternion.Lerp(transform.rotation, baseOrientation, smoothTime);
+        }
+
+        if (isHolding) resourceObj.transform.position = grab.transform.position;
+
+        if (isHolding && Input.GetKey(KeyCode.LeftShift))
+        {
+            supplyRb.isKinematic = false;
+            resourceObj.transform.SetParent(null);
+            supplyRb.AddForce(self.transform.forward * 10, ForceMode.Impulse);
+            isHolding = false;
         }
 
         if (stunVal > 0) stunVal = stunVal - (stunRec * Time.deltaTime);
@@ -67,8 +92,10 @@ public class Player : MonoBehaviour
         
 
         //}
-        Debug.Log(speed + " X " + stunMult + " = " + (speed*stunMult)/2 + " Current: " + stunVal);
+        //Debug.Log(speed + " X " + stunMult + " = " + (speed*stunMult)/2 + " Current: " + stunVal);
     
         
     }
+
+
 }

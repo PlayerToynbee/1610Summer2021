@@ -29,7 +29,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Orientation.cs" />
       <option value="$PROJECT_DIR$/Temp/Compiled-Standard.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resource.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resource_Can.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ResourceObj.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ResourceObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CampScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ResourceItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v6pvucf3ZsRcWmvuZQyv3kg9gL" />
@@ -78,6 +85,8 @@
       <workItem from="1626470897688" duration="10245000" />
       <workItem from="1626727168830" duration="7396000" />
       <workItem from="1626891422152" duration="6080000" />
+      <workItem from="1627321608569" duration="12036000" />
+      <workItem from="1627420271050" duration="8203000" />
     </task>
     <servers />
   </component>
