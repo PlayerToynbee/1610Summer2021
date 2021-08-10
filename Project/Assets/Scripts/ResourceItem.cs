@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ResourceItem : MonoBehaviour
 {
+    //public int resourceValue = 10;
     public Rigidbody canRb;
     public float shrinkSpeed = 0.9f;
     public GameObject campObj;
@@ -22,24 +23,24 @@ public class ResourceItem : MonoBehaviour
         campObj = GameObject.Find("Camp");
     }
 
-    public void OnCollisionEnter(Collision other)
+    /*public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Camp")
         {
             inCamp = true;
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
     {
-        if (inCamp)
+       /* if (inCamp)
         {
             transform.position =
                 Vector3.Lerp(transform.position, campObj.transform.position, Time.deltaTime * shrinkSpeed);
             transform.localScale = Vector3.Lerp(transform.localScale,
                 shrink, Time.deltaTime * shrinkSpeed);
             if (shrink == transform.localScale) Destroy(gameObject);
-        }
+        }*/
     }
 }

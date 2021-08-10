@@ -22,6 +22,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DifficultyButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -33,10 +34,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Resource_Can.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ResourceObj.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ResourceObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CampScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ResourceItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy1.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DifficultyButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ResourceItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI_Rotate.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CampScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v6pvucf3ZsRcWmvuZQyv3kg9gL" />
@@ -87,6 +92,9 @@
       <workItem from="1626891422152" duration="6080000" />
       <workItem from="1627321608569" duration="12036000" />
       <workItem from="1627420271050" duration="8203000" />
+      <workItem from="1627510688997" duration="4717000" />
+      <workItem from="1628282001339" duration="1830000" />
+      <workItem from="1628532342539" duration="31111000" />
     </task>
     <servers />
   </component>
